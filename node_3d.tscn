@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://dgld1lovdhk13"]
+
+[ext_resource type="PackedScene" uid="uid://bbit48lvffn7i" path="res://3ds/rocks_desert_lowpoly.glb" id="1_jewyr"]
+[ext_resource type="PackedScene" uid="uid://1elvbupr628s" path="res://3ds/luffy_hat.glb" id="2_sjkxv"]
+[ext_resource type="PackedScene" uid="uid://e1m1bharbfod" path="res://Grass.glb.glb" id="3_s7wnq"]
+[ext_resource type="PackedScene" uid="uid://bk5b1dafuuvlq" path="res://low_poly_tree.glb" id="4_lio7d"]
+[ext_resource type="PackedScene" uid="uid://cfkx2mp46bvum" path="res://low_poly_tree_1.glb" id="5_7tc6i"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jenc8"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_kd84g"]
+sky_material = SubResource("ProceduralSkyMaterial_jenc8")
+
+[sub_resource type="Environment" id="Environment_60cif"]
+background_mode = 2
+sky = SubResource("Sky_kd84g")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0.341165, -0.146226, 0.92856, -0.365522, 0.889448, 0.274364, 0.302152, 2.43171, 0.962006)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_60cif")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0942047, 0.484026, 1.92966)
+
+[node name="rocks_desert_lowpoly" parent="." instance=ExtResource("1_jewyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.446763, 0.121423, 0.366956)
+
+[node name="luffy_hat" parent="rocks_desert_lowpoly" instance=ExtResource("2_sjkxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.734904, 0.564617, -0.249941)
+
+[node name="Grassglb" parent="." instance=ExtResource("3_s7wnq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0438865, -0.46695, 0.246017)
+
+[node name="low_poly_tree" parent="." instance=ExtResource("4_lio7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7151, 0, -1.06679)
+
+[node name="low_poly_tree2" parent="." instance=ExtResource("4_lio7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30821, 0, -0.503175)
+
+[node name="low_poly_tree_1" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61641, 0, 0.0901923)
+
+[node name="low_poly_tree_2" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59142, 0, 0.265733)
+
+[node name="low_poly_tree_3" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.757448, 0, -2.30462)
+
+[node name="low_poly_tree_4" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.736786, 0, -2.40682)
+
+[node name="low_poly_tree_5" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53166, 0, -1.47156)
+
+[node name="low_poly_tree_6" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28128, 0, -3.13886)
+
+[node name="low_poly_tree_7" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240069, 0, -3.47706)
+
+[node name="low_poly_tree_8" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43217, 0, -3.91175)
+
+[node name="low_poly_tree_9" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10265, 0, -3.87171)
+
+[node name="low_poly_tree_10" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79127, 0, -3.34471)
+
+[node name="low_poly_tree_11" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.86713, 0, -2.4392)
+
+[node name="low_poly_tree_12" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10367, 0, -2.55664)
+
+[node name="low_poly_tree_13" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.01826, 0, -0.917479)
+
+[node name="low_poly_tree_14" parent="." instance=ExtResource("5_7tc6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.78595, 0, 0.398349)
